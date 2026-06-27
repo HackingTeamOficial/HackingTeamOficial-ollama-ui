@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+# ⚡ Hacking Team — Ollama Web UI launcher
+# Arranca la UI local para Ollama en http://localhost:8080
+# Uso: ollama-ui {start|stop|status|restart|logs}
+
+set -e
+
+APP_DIR="$HOME/.local/share/ollama-ui"
+PID_FILE="/tmp/ollama-ui.pid"
+LOG_FILE="/tmp/ollama-ui.log"
+FLASK_PY="$HOME/.local/share/pipx/venvs/flask/bin/python"
+
+start() {
+  if [ -f "$PID_FILE" ] && kill -0 "$(cat $PID_FILE)" 2>/dev/null; then
+    echo "⚠️  Ya está corriendo (PID $(cat $PID_FILE))"
+    echo "    URL: http://localhost:8080"
+    return 1
+  fi
+  if ! command -v ollama >/dev/null; then
+    echo "❌ Ollama no está instalado"
+    return 1
+  fi
+  if ! pgrep -x ollama >/dev/null; then
+    echo "▶️  Arrancando ollama serve…"
+    ollama serve > /tmp/ollama.log 2>&1 &
+    sleep 2
+  fi
+  echo "▶️  Arrancando UI…"
+  cd "$APP_DIR"
+  nohup "$FLASK_PY" app.py > "$LOG_FILE" 2>&1 &
+  echo $! > "$PID_FILE"
+  sleep 2
+  echo "✅ UI arrancada"
+  echo "    PID:  $(cat $PID_FILE)"
+  echo "    URL:  http://localhost:8080"
+  echo "    Log:  $LOG_FILE"
+}
+
+stop() {
+  if [ ! -f "$PID_FILE" ]; then
+    echo "No estaba corriendo"
+    return 0
+  fi
+  PID=$(cat "$PID_FILE")
+  if kill -0 "$PID" 2>/dev/null; then
+    kill "$PID"
+    rm -f "$PID_FILE"
+    echo "🛑 UI parada (PID $PID)"
+  else
+    rm -f "$PID_FILE"
+    echo "PID stale, limpiado"
+  fi
+}
+
+status() {
+  echo "=== Ollama ==="
+  if pgrep -x ollama >/dev/null; then
+    echo "  ✅ corriendo (PID $(pgrep -x ollama))"
+    curl -sS http://localhost:11434/api/tags 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(f'  Modelos: {len(d.get(\"models\",[]))}')" 2>/dev/null || echo "  ⚠️ API no responde"
+  else
+    echo "  ❌ no está corriendo"
+  fi
+  echo
+  echo "=== UI ==="
+  if [ -f "$PID_FILE" ] && kill -0 "$(cat $PID_FILE)" 2>/dev/null; then
+    PID=$(cat "$PID_FILE")
+    echo "  ✅ corriendo (PID $PID)"
+    echo "  URL: http://localhost:8080"
+  else
+    echo "  ❌ no está corriendo"
+  fi
+}
+
+logs() {
+  tail -f "$LOG_FILE"
+}
+
+case "${1:-status}" in
+  start)   start ;;
+  stop)    stop ;;
+  status)  status ;;
+  restart) stop; sleep 1; start ;;
+  logs)    logs ;;
+  *)       echo "Uso: ollama-ui {start|stop|status|restart|logs}"; exit 1 ;;
+esac
