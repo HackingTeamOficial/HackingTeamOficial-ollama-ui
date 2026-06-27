@@ -1,7 +1,9 @@
+                                      ⚡ HACKING TEAM · COMUNIDAD DE HACKERS — UI Local para Ollama
+
 <img width="1920" height="1080" alt="Screenshot_2026-06-28_00_44_22" src="https://github.com/user-attachments/assets/3d0667ae-ee9f-469d-9cf3-98af42a35745" />
 
 
-⚡ HACKING TEAM · COMUNIDAD DE HACKERS — UI Local para Ollama
+                                      ⚡ HACKING TEAM · COMUNIDAD DE HACKERS — UI Local para Ollama
 
 ─────────────────────────────────────────────────────────────────
 1. CONTEXTO Y MOTIVACIÓN
