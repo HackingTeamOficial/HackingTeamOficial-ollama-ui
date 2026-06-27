@@ -87,7 +87,7 @@ $ pipx install flask
 
 # Crear el directorio y descargar app.py
 $ mkdir -p ~/.local/share/ollama-ui
-$ curl -L https://[repo]/app.py -o ~/.local/share/ollama-ui/app.py
+$ curl -L https://github.com/HackingTeamOficial/HackingTeamOficial-ollama-ui/app.py -o ~/.local/share/ollama-ui/app.py
 
 # Lanzador en ~/go/bin/
 $ cat > ~/go/bin/ollama-ui << 'EOF'
@@ -150,7 +150,7 @@ Consideraciones de aislamiento:
 ─────────────────────────────────────────────────────────────────
 
   Licencia: MIT 
-  Repo:     [enlace]
+  Repo:     https://github.com/HackingTeamOficial/HackingTeamOficial-ollama-ui
   Autor:    By AnonSec777
 
 ⚡ HACKING TEAM · COMUNIDAD DE HACKERS
@@ -160,5 +160,52 @@ Consideraciones de aislamiento:
 #Cybersecurity #RedTeam #Pentesting #OSINT #BugBounty
 #OpenSource #Flask #Python #SelfHosted #DataPrivacy
 #HackingTeam #ComunidadDeHackers
+
+ENLACES DE INTERES
+
+💻🔥 Somos una comunidad de hacking y ciberseguridad donde aprender es parte del juego 🔥💻
+
+🧑‍💻 Aquí encontrarás gente que está empezando y otros que ya están en nivel avanzado, todos compartiendo herramientas, trucos, metodologías y experiencias reales.
+
+🛠 Desde pentesting hasta OSINT, explotación o defensa, tocamos todo lo necesario para crecer en este mundo.
+
+🎯 Nos gusta aprender haciendo: laboratorios, retos, pruebas reales y colaboración constante.
+
+🧠 Nuestros logotipos representan quiénes somos: una comunidad unida por la curiosidad, el conocimiento y las ganas de romper (y entender) sistemas.
+
+🚀 Si te mola la ciberseguridad y quieres subir de nivel rodeado de gente que está en lo mismo que tú… este es tu sitio.
+
+🌐 Página Web:
+https://www.hackingteamoficcial.uk/
+
+💻 GitHub:
+https://github.com/HackingTeamOficial
+
+📲 Telegram:
+https://t.me/PlantillasNucleiHackingTeam
+https://t.me/HackingTeamGrupoOfficial
+https://t.me/+0hHSaKO7eI9mNWY8 (Difusión)
+https://t.me/+llcmNGzz6JIyMmI0 (Biblioteca)
+https://t.me/TermuxHackingTeam
+
+🐦 X (Twitter):
+@HackingTeam77
+
+🦋 Bluesky:
+https://bsky.app/profile/hackingteam.bsky.social
+
+💬 Discord:
+https://discord.gg/V4nPFbQX
+
+📘 Facebook:
+https://www.facebook.com/groups/hackingteam2022/?ref=share
+https://www.facebook.com/groups/HackingTeamCyber/?ref=share
+
+🎥 YouTube:
+https://www.youtube.com/@HackingTeamOficial/videos
+
+🎵 TikTok:
+https://www.tiktok.com/@hackingteamprohackers
+https://www.tiktok.com/@hacking.kdea?_t=ZS-8vTtlaQrDTL&_r=1
 
 
