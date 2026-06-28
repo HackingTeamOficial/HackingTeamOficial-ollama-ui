@@ -1,6 +1,13 @@
 ⚡ HACKING TEAM · COMUNIDAD DE HACKERS — UI Local para Ollama
 
-<img width="1920" height="1080" alt="Screenshot_2026-06-28_00_44_22" src="https://github.com/user-attachments/assets/3d0667ae-ee9f-469d-9cf3-98af42a35745" />
+<img width="3840" height="1080" alt="Screenshot_2026-06-28_12_22_08" src="https://github.com/user-attachments/assets/63683b01-6bb8-45a7-8527-691b4fefcc6a" />
+
+
+<img width="3840" height="1080" alt="Screenshot_2026-06-28_12_22_35" src="https://github.com/user-attachments/assets/f5e1f047-6e9d-4815-939c-d854e2c04bcc" />
+<img width="3840" height="1080" alt="Screenshot_2026-06-28_12_22_24" src="https://github.com/user-attachments/assets/306ec337-2554-42e2-9234-6300a3e25322" />
+<img width="3840" height="1080" alt="Screenshot_2026-06-28_12_22_20" src="https://github.com/user-attachments/assets/b89f6081-e350-4d23-a052-119f03e98c37" />
+<img width="3840" height="1080" alt="Screenshot_2026-06-28_12_22_14" src="https://github.com/user-attachments/assets/4ab844ef-36ee-4651-a381-dab348fb7723" />
+
 
 
 ─────────────────────────────────────────────────────────────────
